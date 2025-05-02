@@ -4,12 +4,21 @@ import json
 import importlib
 import cv2
 import time
+import os
+import platform
 from camera_manager import CameraManager
 from config_loader import ConfigLoader
 from logger import Logger
 
+# Debug logging to confirm script execution
+logger = Logger()
+logger.log(f"Executing __main__.py at path: {os.path.abspath(__file__)}")
+logger.log(f"Python version: {platform.python_version()}")
+logger.log(f"sys.path: {sys.path}")
+logger.log(f"Environment variables: {os.environ}")
+
 # Version identifier with timestamp for debugging
-SCRIPT_VERSION = f"1.0.1-{int(time.time())}"
+SCRIPT_VERSION = f"1.0.3-{int(time.time())}"
 
 def load_dependency_check(logger):
     """Load dependency_check.json or create it if it doesn't exist."""
@@ -312,3 +321,4 @@ if __name__ == "__main__":
         logger = Logger()
         logger.log(f"Unhandled exception in main: {e}")
         sys.exit(1)
+

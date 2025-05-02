@@ -62,3 +62,4 @@ fi
 rm -f "$UPDATE_FILE"
 echo "Removed $UPDATE_FILE from $DOWNLOADS_DIR."
 echo "Update process complete."
+

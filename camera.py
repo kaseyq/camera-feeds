@@ -435,3 +435,4 @@ class Camera:
             "current": {"x": self.x_pos, "y": self.y_pos, "w": self.config["window_width"], "h": self.config["window_height"]},
             "expanded": False
         }
+

@@ -1,1 +1,2 @@
-# Empty file to make scripts a package
+# Empty file to make the directory a Python package
+
